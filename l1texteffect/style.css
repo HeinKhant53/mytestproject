@@ -1,0 +1,70 @@
+body{
+    height: 100vh;
+
+    color: #bbb;
+    background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.5));
+
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+}
+
+span.txtani{
+    animation: myani 0.8s infinite;
+}
+
+@keyframes myani {
+    from{
+        border: none;
+    }
+    to{
+        padding-right: 2px;
+        border-right: 2px solid #aaa;
+    }
+}
+
+.red{
+    color: red;
+}
+
+.skyblue{
+    color: skyblue;
+}
+
+.violet{
+    color: violet;
+}
+
+.yellow{
+    color: yellow;
+}
+
+em{
+    font-size: unset;
+
+
+    animation-name: myani2;
+    animation-duration: 0.8s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes myani2 {
+    0%{
+        opacity: 0;
+        text-shadow: 1px 1px 2px red;
+    }
+    50%{
+        opacity: 0.5;
+        text-shadow: 1px 1px 2px green;
+    }
+    100%{
+        opacity: 1;
+        text-shadow: 1px 1px 2px skyblue;
+    }
+}
