@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON Format</title>
+    <style type="text/css">
+        body{
+            font-family: sans-serif;
+
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        form{
+            width: 300px;
+            background-color: #f4f4f4;
+
+            text-align: center;
+
+            padding: 20px 0;
+        }   
+
+        input[type="text"]{
+            width: 80%;
+
+            padding: 10px 15px;            
+            border-radius: 5px;
+        }
+        input:focus{
+            outline: none;
+        }
+
+        .btn{
+            padding: 5px 40px;
+            margin-top: 10px;
+        }
+        
+        #result{
+            color: darkblue;
+            
+            font-size: 18px;
+
+            border-top: 2px dashed brown;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="#" method="#" id="form">
+            <h2>JSON Format</h2>
+            <input type="text" name="text" id="text" class="form-control" />   
+
+            <input type="submit" class="btn" id="submit-btn" value="Submit">
+
+            <div id="result"></div>
+
+        </form>
+
+    </div>
+
+    <script type="text/javascript">
+        const gettext = document.getElementById('text');
+        const getbtn = document.getElementById('submit-btn');
+        const getresult = document.getElementById('result');
+        // console.log(gettext);
+
+        getbtn.onclick = function(e){
+
+            var text = gettext.value;
+
+            let alltext;
+
+            if(localStorage.getItem('mytext') === null){
+                alltext = [];
+            }else{
+                alltext = JSON.parse(localStorage.getItem('mytext'));
+            }
+
+            alltext.push(text);
+
+            localStorage.setItem('mytext',JSON.stringify(alltext));
+
+
+            e.preventDefault();
+
+
+            result(JSON.parse(localStorage.getItem('mytext')));
+        }
+
+        function result(arrays){
+            // console.log(arrays);
+
+            arrays.forEach(array => {
+                getresult.innerHTML= array;
+            });
+        }
+
+    </script>
+</body>
+</html>

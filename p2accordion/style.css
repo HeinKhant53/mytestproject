@@ -1,0 +1,62 @@
+body{
+    height: 100vh;
+    font-family: sans-serif;
+
+    background-color: #ffffff;
+    
+}
+
+.accordion{
+    width: 100%;
+}
+
+.acctitle{
+    font-size: 15px;
+    
+    color: #fff;
+    background-color: gray;
+
+    margin: 0;
+    padding: 15px 20px;
+    
+    user-select: none;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.acctitle.active{
+    background-color: skyblue;
+}
+.acctitle::after{
+    content: '\f067';
+    font-family: 'Font Awesome 5 Free';
+
+    /* position: absolute;
+    top: 50%;
+    right: 10px;
+
+    transform: translateY(-50%); */
+
+    float: right;
+}
+.active.acctitle::after{
+    content: '\f068';
+}
+
+.acccontent{
+    height: 0;
+
+    background-color: #f4f4f4;
+
+    text-indent: 36px;
+    text-align: justify;
+
+    padding: 0 20px;
+    
+    overflow: hidden;
+
+    transition: all .5s ease-in-out;
+}
+

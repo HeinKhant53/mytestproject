@@ -1,0 +1,78 @@
+:root{
+    --text-color : #aaa;
+    --btn-bg: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+    --signup-btn: linear-gradient( #a8edea, #fed6e3);
+}
+
+body{
+    background-color: #fff;
+    
+    font-family: sans-serif;
+
+}
+.logoimgs{
+    width: 50px;
+}
+
+.logonames{
+    font-size: 30px;
+    font-weight: bolder;
+    vertical-align: center;
+}
+
+
+.navgations{
+   background: #d1fdff !important;
+
+}
+
+.nav-link{
+    text-transform: uppercase;
+}
+
+.nav-link.active,.registers{
+    background-color: #fddb92;
+    color: #fff !important;
+    
+    border-radius: 15px;
+    padding: 10px 20px !important;
+}
+.registers:hover{
+    color: orange !important;
+    border-color: #fddb92;
+}
+.collapsebtns{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .collapsebtns{
+        display: inline-block;
+    }
+}
+
+/* Start Banner */
+.banners{
+    height: 100vh;
+
+    background-image: linear-gradient(
+        20deg, 
+        #fddb92 30%, 
+        #d1fdff 10%
+    );
+
+    background-size: 10%; 
+    background-position: left;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 1s;
+}
+.banners:hover{
+    background-size: 15%;
+    background-position: right;
+}
+
+/* End Banner */

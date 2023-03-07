@@ -1,0 +1,31 @@
+*{
+    -webkit-print-color-adjust: exact;
+}
+
+.header{
+    background-color: cyan;
+}
+
+
+.print-btn{
+    display: none;
+}
+
+
+
+.pagebreak{
+    page-break-after: always; 
+
+    text-indent: 50px;
+
+    padding: 0 10px;
+}
+
+
+@page{
+    margin: 0;
+
+    /* size: auto;     */
+    size: landscape;
+}
+
